@@ -10,7 +10,7 @@ urlpatterns = [
     path("login/enterlogin/", enterlogin, name="enterlogin"),
 
     path("join/", join, name="join"),
-    path("join/createuser/", create_user, name="createuser"),
+    path("createuser/", create_user, name="createuser"),
 
 # 차트
     path("select/chart/", chart, name="chart"),
