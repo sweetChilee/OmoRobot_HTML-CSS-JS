@@ -1,0 +1,220 @@
+.setting_box{
+  position: relative;
+  top: -50px;
+}
+/* checkbox 1 */
+select::-ms-expand { 
+	display: none;
+}
+.select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color:rgb(255, 227, 66);
+}
+
+.selectBox {
+  position: relative;
+  width: 20vw;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid rgb(255, 227, 66);
+}
+.selectBox .select {
+  width: inherit;
+  height: inherit;
+  background: transparent;
+  border: none;
+  outline: 0 none;
+  padding: 0 5px;
+  position: relative;
+  z-index: 3;
+}
+.selectBox .select option {
+  background: rgb(255, 227, 66);
+  color: black;
+  padding: 3px 0;
+  font-size: 16px;
+}
+.selectBox .icoArrow {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  z-index: 1; 
+  width: 35px; 
+  height: inherit;
+  border-left: 2px solid rgb(255, 227, 66);
+  font-size: 1.5em;
+}
+
+ /* checkbox 2 */
+#selectbox::-ms-expand { 
+	display: none;
+}
+#selectbox {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color:rgb(255, 227, 66);
+}
+
+#selbox{
+  position: relative;
+  width: 20vw;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid rgb(255, 227, 66);
+}
+#selbox #selectbox {
+  width: inherit;
+  height: inherit;
+  background: transparent;
+  border: none;
+  outline: 0 none;
+  padding: 0 5px;
+  position: relative;
+  z-index: 3;
+}
+#selbox #selectbox option {
+  background: rgb(255, 227, 66);
+  color: black;
+  padding: 3px 0;
+  font-size: 16px;
+}
+#selbox .icoArrow {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  z-index: 1; 
+  width: 35px; 
+  height: inherit;
+  border-left: 2px solid rgb(255, 227, 66);
+  font-size: 1.5em;
+}
+
+/* input란 */
+#sett{
+  position: relative;
+  border: none;
+  color:rgb(255, 227, 66);
+  background-color: transparent;
+  border-bottom: 3px rgb(255, 227, 66) solid;
+  height: 40px;
+  width: 20vw;
+  margin-bottom: 20px;
+}
+
+#sett:focus{
+  outline: none;
+  box-shadow:0 5px 10px rgba(255, 217, 0, 0.74);
+}
+
+/* 버튼 */
+.btn-c{
+  position: relative;
+  display: inline-block;
+  border: none;
+  font-size: 1em;
+  padding: 25px 30px;
+  margin: 40px 0;
+  background-color: transparent;
+  color: rgb(43, 226, 165);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+ 
+}
+.btn-c:hover{
+  background: rgb(43, 226, 165);
+  color: #050801;
+  box-shadow: 0 0 5px rgb(43, 226, 165),
+              0 0 25px rgb(43, 226, 165),
+              0 0 50px rgb(43, 226, 165),
+              0 0 200px rgb(43, 226, 165);
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  cursor: pointer;
+}
+.btn-c:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+.btn-c:nth-child(2){
+  filter: hue-rotate(110deg);
+}
+.btn-c span{
+  position: absolute;
+  display: block;
+}
+.btn-c span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,rgb(43, 226, 165));
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+.btn-c span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,rgb(43, 226, 165));
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.btn-c span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,rgb(43, 226, 165));
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+.btn-c span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,rgb(43, 226, 165));
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}

@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sixman</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/header.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/head_video.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/article1.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/article2_5.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/article2.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/article3.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/select.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/table.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/article4.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/arrow.css' %}"/>
+  
+
+  <!-- bootstrap profile 부분 -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/tempusdominus-bootstrap-4.min.css' %}"/>
+  <link rel="icon" href="{% static 'favicologo/android-icon-48x48.png' %}"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="{% static 'favicologo/android-icon-48x48.png' %}">
+  <!-- Scripts 다운로드 -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="{% static 'js/chartjs-plugin-datalabels.min.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+</head>
+<body>
+  <header>
+    <div class="headers">
+      {% if user_name %}
+      <a class="rid" href="/{{user_name}}/" name="home">
+      {% else %}
+      <a class="rid" href="/" name="home">
+      {% endif %}
+        <img src="{% static 'image/real logo.png'%}">
+        <span id="logo_text">Six mAn</span>
+        <span id="logo_text2">Project</span>
+      </a>
+    </div>
+  </header>
+  {% include 'nav.html' %}
+  <div class="jb-box">
+    <video muted autoplay loop>
+      <source src="{% static 'videos/test3.mp4' %}" type="video/mp4">
+      <strong>Your browser does not support the video tag.</strong>
+    </video>
+    <div class="jb-text">
+      <p>Introduce Product</p>
+    </div>
+  </div>
+  {% include 'article1.html' %}
+  {% include 'article2_5.html' %}
+  {% include 'article2.html' %}
+  {% include 'article3.html' %}
+  {% include 'article4.html' %}
+  {% include 'footer.html' %}
+  {% include 'arrow.html' %}
+
+
+  <!-- Scripts font awesome && jquery -->
+  <script src="https://kit.fontawesome.com/66e5a82cea.js" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+
+  <!-- chartjs && scroll -->
+  <script src="{% static 'js/chart.js' %}"></script>
+  <script src="{% static 'js/doughnut.js' %}"></script>
+  <script src="{% static 'js/scroll.js' %}"></script>
+  <script src="{% static 'js/scroll2.js' %}"></script>
+  <script src="{% static 'js/scroll3.js' %}"></script>
+  <script src="{% static 'js/scroll4.js' %}"></script>
+
+  <!-- bootstrap profile -->
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/test3.js' %}"></script>
+</body>
+</html>

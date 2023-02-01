@@ -1,0 +1,23 @@
+/* 본문 전 head video */
+.jb-box { 
+  width: 99.1vw; 
+  height: 80vh; 
+  overflow: hidden;
+  margin: 0px auto; 
+  position: relative; 
+  outline: none;
+  border: none;
+}
+
+.jb-text { position: absolute; top: 50%; width: 100%; }
+
+.jb-text p { margin-top: -24px; text-align: center; font-size: 48px; color: #c5c5c5; }
+
+.jb-text p:after {
+  display:block;
+  content: '';
+  border-bottom: solid 5px #c5c5c5;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.jb-text p:hover:after  { transform: scaleX(1); }

@@ -249,16 +249,7 @@ def delete_allmycar(request, pk, fk):
 ###
 
 
-def selectcar(request):
-    sel_speed = request.GET.get("speed")
-    sel_encoder = request.GET.get("encoder")
-    con_speed = Mycar.objects.filter(mycar_speed = sel_speed)
-    final_mycar= con_speed.filter(mycar_encoder_or = sel_encoder)
 
-    context = {
-        "mycars" : final_mycar,
-    }
-    return render(request, "index.html", context)
 
 @csrf_exempt
 def chart(request):
@@ -268,7 +259,7 @@ def chart(request):
        
         print(data["speed"], data["encoder"])
 
-        qs = Mycar.objects.filter(mycar_speed=data["speed"], mycar_encoder_or=data["encoder"])
+        qs = MycarAll.objects.filter(mycar_speed=data["speed"], mycar_encoder_or=data["encoder"])
 
         ac_dict = {}
         i = 0

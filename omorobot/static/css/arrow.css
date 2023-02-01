@@ -1,0 +1,65 @@
+/* 버튼 위아래로css */
+.btns {
+  display: flex;
+  position: fixed;
+  right: .4rem;
+  bottom: .4rem;
+  text-decoration: none;
+}
+
+.btns>div {
+  padding: .6rem 1.2rem;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .2s;
+  color: #fff;
+  margin-right: .4rem;
+}
+
+/* 화살표 모양 만들기 */
+.moveTopBtn::after {
+  position: relative;
+  top: 3px;
+  content: '';
+  width: 12px;
+  /* 사이즈 */
+  height: 12px;
+  /* 사이즈 */
+  border-top: 5px solid #000;
+  /* 선 두께 */
+  border-right: 5px solid #000;
+  /* 선 두께 */
+  transform: rotate(315deg);
+  /* 각도 */
+}
+
+.moveBottomBtn::after {
+  position: relative;
+  bottom: 3px;
+  /* */
+  content: '';
+  width: 10px;
+  /* 사이즈 */
+  height: 10px;
+  /* 사이즈 */
+  border-top: 5px solid #000;
+  /* 선 두께 */
+  border-right: 5px solid #000;
+  /* 선 두께 */
+  transform: rotate(135deg);
+  /* 각도 */
+}
+
+.moveTopBtn:hover {
+  color: #000;
+  background: #febf00;
+}
+
+.moveBottomBtn:hover {
+  color: #000;
+  background: #febf00;
+}

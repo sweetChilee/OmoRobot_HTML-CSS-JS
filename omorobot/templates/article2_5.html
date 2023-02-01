@@ -1,0 +1,104 @@
+<article class="art2_5">
+  <h1 class="I_title">Preview</h1>
+  <div style="position:relative; top:0px;">
+    <div class="revenues">
+      <div class="revenue_box">
+        <i class="fa-solid fa-battery-full fa-3x"></i>
+        <div class="r_text">
+          <p style="color:rgba(170, 170, 170, 0.801)">Battery</p>
+          <h4 style="color:white;">$1234</h4>
+        </div>
+      </div>
+      <div class="revenue_box">
+        <i class="fa-solid fa-gauge-simple-high fa-3x"></i>
+        <div class="r_text">
+          <p style="color:rgba(170, 170, 170, 0.801)">Speed</p>
+          <h4 style="color:white;">$1234</h4>
+        </div>
+      </div>
+      <div class="revenue_box">
+        <i class="fa-solid fa-palette fa-3x"></i>
+        <div class="r_text">
+          <p style="color:rgba(170, 170, 170, 0.801)">Color</p>
+          <h4 style="color:white;">$1234</h4>
+        </div>
+      </div>
+      <div class="revenue_box">
+        <i class="fa-solid fa-clock-rotate-left fa-3x"></i>
+        <div class="r_text">
+          <p style="color:rgba(170, 170, 170, 0.801)">Current</p>
+          <h4 style="color:white;">$1234</h4>
+        </div>
+      </div>
+    </div>
+
+      <div style="display:flex">
+        <!-- single chart -->
+        <div class="cha" style="margin-right:7vw;">
+          <h6>Single Line Chart</h6>
+          <canvas style="height: 350px;" id="line-chart"></canvas>
+        </div>
+
+        <!-- bar chart -->
+        <div class="cha">
+          <h6 class="mb-4">Single Bar Chart</h6>
+          <canvas style="height: 350px;" id="bar-chart"></canvas>
+        </div>
+      </div>
+  </div>
+</article>
+
+<!-- 막대 그래프 -->
+<script>
+(function ($) {
+    var ctx4 = $("#bar-chart").get(0).getContext("2d");
+    var myChart4 = new Chart(ctx4, {
+        type: "bar",
+        data: {
+            labels: ["Italy", "France", "Spain", "USA", "Argentina"],
+            datasets: [{
+                backgroundColor: [
+                    "rgba(255, 207, 36, 1)",
+                    "rgba(255, 207, 36, .6)",
+                    "rgba(255, 207, 36, .5)",
+                    "rgba(255, 207, 36, .4)",
+                    "rgba(255, 207, 36, .3)"
+                ],
+                data: [55, 49, 44, 24, 15]
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+})(jQuery);
+</script>
+
+<!-- 꺾은선 그래프 -->
+<script>
+  (function ($) {
+
+      Chart.defaults.color = "#050099";
+    Chart.defaults.borderColor = "#EAEAEA";
+      var ctx3 = $("#line-chart").get(0).getContext("2d");
+    var myChart3 = new Chart(ctx3, {
+        type: "line",
+        data: {
+            labels: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150],
+            datasets: [{
+                label: "Salse",
+                fill: false,
+                backgroundColor: "rgba(255, 207, 36, .4)",
+                data: [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15],
+                borderColor: "rgba(255, 207, 36, 1)",
+                borderWidth: 1 //경계선 굵기
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+})(jQuery);
+
+</script>

@@ -1,0 +1,70 @@
+.footer_all{
+  background-color: black;
+  color: gold;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 99.1vw;
+}
+.social_total{
+  position: relative;
+  margin-top: 15px;
+  left: 30px;
+  width:10vw;
+}
+.social1{
+  display:flex;
+  width:25vw;
+}
+.social2{
+  display:flex;
+  width:25vw;
+  margin-top:20px;
+  margin-left:40px;
+}
+.fa-brands:hover{
+ transform: scale(1.3);
+}
+
+.lonum{
+  font-size: 1rem;
+  word-spacing: 5px;
+  margin: auto;
+  position: relative;
+  color: wheat;
+}
+
+#bt{
+  width:4vw;
+}
+
+#f_logo1{
+  background-image: url('../image/미래융합blk.png');
+  background-size: 100% 100%;
+  width: 300px;  height: 150px;
+}
+#f_logo2{
+  background-image: url('../image/real\ logo.png');
+  background-size: 95% 100%;
+  width: 170px;  height: 150px;
+}
+
+
+
+@media(max-width: 700px){
+  .lonum {
+    display:none;
+  }
+
+  .social{
+    margin: auto; 
+    margin-bottom: 200px; 
+  }
+}
+
+#logo{
+  background-color: gold;
+  margin-bottom: 15px;
+  margin: 0;
+  padding: 0;
+}

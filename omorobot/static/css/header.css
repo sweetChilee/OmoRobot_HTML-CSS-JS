@@ -1,0 +1,71 @@
+a {
+  text-decoration: none;
+}
+
+header{
+  background-color: black;
+  color: rgba(223,190,106,0.7);
+  margin: 0px;
+}
+
+/* 로그인, 회원가입, 시작페이지 */
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  font-size: 0.8rem;
+}
+
+/* sixmen 프로젝트 로고 및 문구 */
+.headers {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Medula One', sans-serif;
+  font-size: 3em;
+}
+
+.rid{
+  position: relative;
+  left: 160px;
+}
+span[id^="logo"]{
+  position: relative;
+  top: -30px;
+}
+img{
+  max-width: 12%;
+  max-height: 12%;
+  margin-top: 10px;
+}
+#logo_text{
+  color: black;
+  background-color: black;
+  animation: fadeGold 2s forwards;
+  animation-delay: 1s;
+  position: relative;
+  margin-right: 10px;
+}
+
+#logo_text2 {
+  color: black;
+  background-color: black;
+  animation: fadeWhite 2s forwards;
+  animation-delay: 1s;
+  position: relative;
+}
+
+
+@keyframes fadeWhite {
+  100% { color: white; }
+}
+
+@keyframes fadeGold {
+  100% {color:rgba(223,190,106,0.7);}
+}

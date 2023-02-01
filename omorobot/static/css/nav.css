@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+nav{
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: black;
+  border: 2px black solid;
+  color: white;
+  margin:0px;
+
+}
+.test{
+  position:absolute;
+  right: 0px;
+  margin-right: 20px;
+  font-size: 0.7em;
+}
+a{
+  text-decoration:none !important;
+  color: white;
+}
+/* 목록 */
+ul{
+  display: flex;
+  font-size: 1.3rem;
+}
+li{
+  display:inline-block; 
+  justify-content: center;
+  list-style: none;
+  height: 10px;
+  width: auto;
+  margin: 0px 10px 0px 0px;
+  /* top right bottom left */
+}
+
+#btn12 {
+  display: inline-block;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .9rem;
+  font-family: 'SBAggroB';
+  letter-spacing: 0.3em;
+  color: rgba(223,190,106,0.7);
+  border-radius: 0;
+  padding: 18px 20px 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(360deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 50% 1%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0px;
+  border: none;
+}
+
+#btn12:hover {
+  color: #fff;
+  background-position: 10% 99%;
+}
+/* 목록 밑줄 */
+/* .pro:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px gold;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.pro:hover:after { transform: scaleX(1); }
+
+.bat:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px rgb(255, 231, 92);
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.bat:hover:after { transform: scaleX(1); }
+
+.hist:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px rgb(255, 243, 176); 
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.hist:hover:after { transform: scaleX(1); }
+
+.about:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px rgb(228, 228, 228);
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.about:hover:after { transform: scaleX(1); }
+ */

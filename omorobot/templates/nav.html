@@ -1,0 +1,24 @@
+<nav>
+  <div class="title_area"></div>
+  <ul>     
+    <div style="margin:0px">
+    <li><a href="javascript:window.scrollTo( 0, 100 );" class="bat" id="btn12">Product</a></li>
+    <li><a href="javascript:window.scrollTo( 0, 6632 );" class="pro" id="btn12">Preview</a></li>
+    <li><a href="javascript:window.scrollTo( 0, 7542 );" class="bat" id="btn12">Battery</a></li>
+    <li><a href="javascript:window.scrollTo( 0, 8480 );" class="hist" id="btn12">History</a></li>
+    <li><a href="javascript:window.scrollTo( 0, 9500 );" class="about" id="btn12">About us</a></li>
+    </div>
+    {% if user_name %}
+    <div class="test" style="font-size :0.8em">
+      <a class="login_login" href="/{{user_name}}/">
+        <i class="fa fa-user"></i>&nbsp;&nbsp;{{user_name}}</a>&nbsp;&nbsp;
+      <a class="login_login" href="/">logout</a>&nbsp;&nbsp;
+      </div>
+    {% else %}
+    <div class="test">
+    <a class="login_login" href="/login/">로그인</a>&nbsp;&nbsp;
+    <a class="login_login" href="/join/">회원가입</a>
+    </div>
+    {% endif %}
+  </ul>
+</nav>
