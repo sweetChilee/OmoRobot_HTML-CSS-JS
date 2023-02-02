@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import User, Mycar, MycarAll
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-import sqlite3
+import requests
 import json
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
@@ -14,6 +14,12 @@ context = {
             }
 
 
+def realtime(request):
+    url = "https://port-0-test1-1jx7m2gldd914cb.gksl2.cloudtype.app/mycar"
+    requestData = requests.get(url)
+    jsonData = requestData.json()
+
+
 ###
 #  인덱스 페이지 관련
 #  렌더사항
@@ -23,10 +29,47 @@ context = {
 def index(request):
     mycar = Mycar.objects.all()
     global context
+
+    ###
+    # real car 부분
+    ### 
+
+    real_speed =[]
+    real_battery = []
+    real_color = []
+    real_created_at =[]
+    real_car_id =[]
+
+    response_data = requests.get('https://port-0-test1-1jx7m2gldd914cb.gksl2.cloudtype.app/mycar')
+    if response_data.status_code == 200 :
+        reqData = response_data.json()
+        for i in reqData:
+            real_speed.append(int(i['speed']))
+            real_battery.append(int(i['battery']))
+            real_color.append(i['color'])
+            real_created_at.append(i['created_at'])
+            real_car_id.append(int(i['id']))
+
+    real_battery.reverse()
+    show_battery = real_battery[:5]
+    show_battery.reverse()
+    real_speed.reverse()
+    show_speed = real_speed[:10]
+    show_speed.reverse()
+    ###
+    # 출력 부분
+    ### 
     context = {
         "joinmessage" : "",
         "message" : "",
-        "mycars": mycar
+        "mycars": mycar,
+        "real_speed" : show_speed,
+        "real_battery" : show_battery,
+        "preview_speed" : real_speed[0],
+        "preview_battery" : real_battery[0],
+        "preview_color" : real_color[-1],
+        "preview_created_at" : real_created_at[-1],
+
     }
     return render(request, "index.html", context)
 
@@ -36,9 +79,47 @@ def user(request, pk) :
     mycar = Mycar.objects.all()
     old_user = User.objects.get(user_name=f"{pk}")
     username = old_user.user_name
+
+    ###
+    # real car 부분
+    ### 
+
+    real_speed =[]
+    real_battery = []
+    real_color = []
+    real_created_at =[]
+    real_car_id =[]
+
+    response_data = requests.get('https://port-0-test1-1jx7m2gldd914cb.gksl2.cloudtype.app/mycar')
+    if response_data.status_code == 200 :
+        reqData = response_data.json()
+        for i in reqData:
+            real_speed.append(int(i['speed']))
+            real_battery.append(int(i['battery']))
+            real_color.append(i['color'])
+            real_created_at.append(i['created_at'])
+            real_car_id.append(int(i['id']))
+
+    real_battery.reverse()
+    show_battery = real_battery[:5]
+    show_battery.reverse()
+    real_speed.reverse()
+    show_speed = real_speed[:10]
+    show_speed.reverse()
+ 
+    ###
+    # 출력 부분
+    ### 
+
     context = {
         "user_name" : username,
         "mycars" : mycar,
+        "real_speed" : show_speed,
+        "real_battery" : show_battery,
+        "preview_speed" : real_speed[0],
+        "preview_battery" : real_battery[0],
+        "preview_color" : real_color[-1],
+        "preview_created_at" : real_created_at[-1],
     }
     return render(request, "index.html", context)
 

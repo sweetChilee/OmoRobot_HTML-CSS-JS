@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-%259(04n@hsc$+7-^850nbpveo%(4v3^(5pzh4*nvo)+r0e9%o'
 
- # 배포용 시크릿키
+#  배포용 시크릿키
 def get_env_variable(var_name):
   try:
     return os.environ[var_name]

@@ -6,28 +6,28 @@
         <i class="fa-solid fa-battery-full fa-3x"></i>
         <div class="r_text">
           <p style="color:rgba(170, 170, 170, 0.801)">Battery</p>
-          <h4 style="color:white;">$1234</h4>
+          <h4 style="color:white;">{{preview_battery}}</h4>
         </div>
       </div>
       <div class="revenue_box">
         <i class="fa-solid fa-gauge-simple-high fa-3x"></i>
         <div class="r_text">
           <p style="color:rgba(170, 170, 170, 0.801)">Speed</p>
-          <h4 style="color:white;">$1234</h4>
+          <h4 style="color:white;">{{preview_speed}}</h4>
         </div>
       </div>
       <div class="revenue_box">
         <i class="fa-solid fa-palette fa-3x"></i>
         <div class="r_text">
           <p style="color:rgba(170, 170, 170, 0.801)">Color</p>
-          <h4 style="color:white;">$1234</h4>
+          <h4 style="color:white;">{{preview_color}}</h4>
         </div>
       </div>
       <div class="revenue_box">
         <i class="fa-solid fa-clock-rotate-left fa-3x"></i>
         <div class="r_text">
           <p style="color:rgba(170, 170, 170, 0.801)">Current</p>
-          <h4 style="color:white;">$1234</h4>
+          <h4 style="color:white;">{{preview_created_at}}</h4>
         </div>
       </div>
     </div>
@@ -35,13 +35,13 @@
       <div style="display:flex">
         <!-- single chart -->
         <div class="cha" style="margin-right:7vw;">
-          <h6>Single Line Chart</h6>
+          <h6>speed</h6>
           <canvas style="height: 350px;" id="line-chart"></canvas>
         </div>
 
         <!-- bar chart -->
         <div class="cha">
-          <h6 class="mb-4">Single Bar Chart</h6>
+          <h6 class="mb-4">battery</h6>
           <canvas style="height: 350px;" id="bar-chart"></canvas>
         </div>
       </div>
@@ -55,16 +55,17 @@
     var myChart4 = new Chart(ctx4, {
         type: "bar",
         data: {
-            labels: ["Italy", "France", "Spain", "USA", "Argentina"],
+            labels: ["1", "2", "3", "4", "5"],
             datasets: [{
+                label: "battery",
                 backgroundColor: [
-                    "rgba(255, 207, 36, 1)",
-                    "rgba(255, 207, 36, .6)",
                     "rgba(255, 207, 36, .5)",
-                    "rgba(255, 207, 36, .4)",
-                    "rgba(255, 207, 36, .3)"
+                    "rgba(255, 207, 36, .6)",
+                    "rgba(255, 207, 36, .7)",
+                    "rgba(255, 207, 36, .8)",
+                    "rgba(255, 207, 36, 1)"
                 ],
-                data: [55, 49, 44, 24, 15]
+                data: {{real_battery}},
             }]
         },
         options: {
@@ -84,12 +85,12 @@
     var myChart3 = new Chart(ctx3, {
         type: "line",
         data: {
-            labels: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150],
+            labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             datasets: [{
-                label: "Salse",
+                label: "speed",
                 fill: false,
                 backgroundColor: "rgba(255, 207, 36, .4)",
-                data: [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15],
+                data: {{real_speed}},
                 borderColor: "rgba(255, 207, 36, 1)",
                 borderWidth: 1 //경계선 굵기
             }]
