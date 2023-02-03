@@ -1,0 +1,249 @@
+.data{
+  color:white;
+  font-size: 10rem;
+}
+
+.create_container{
+  position: relative;
+}
+
+/* data삽입 숨기기 */
+#hide_button{
+  visibility: hidden;
+}
+
+
+#chart_d1{
+  /* border : white solid 1px; */
+  position: relative; height:150px; width:400px;
+  margin-right : 50px;
+} 
+
+#chart_d2{
+  /* border : white solid 1px; */
+  margin-right : 50px;
+  position: relative; height:150px; width:400px
+}
+
+#chart_d3{
+  /* border : white solid 1px; */
+  margin-right : 50px;
+  position: relative; height:150px; width:400px
+}
+
+#chart_d{
+  position: relative;
+  display:flex;
+  align-items: center;
+}
+
+#chart_l1{
+
+  margin-top : 150px;
+  position: relative; 
+
+  height:600px; width:1200px;
+  display:flex;
+  align-items: center;
+}
+#chart_all{
+  /* border: yellow solid 0.5px ; */
+  padding: 10px;
+}
+
+#inputzone{
+  display: table;
+}
+.para{
+  display: table-cell;
+  vertical-align: midd;
+  color:white;
+  align-items: center;
+  position: relative;
+}
+
+
+
+
+#form32 #speed1{
+  position: relative;
+
+  /* border: 2px solid rgb(255, 227, 66); */
+  border-radius: 4px;
+
+  background: transparent;
+  outline: 0 none;
+  padding: 0 5px;
+  color: rgb(255, 227, 66);
+  /* position: relative; */
+
+}
+
+#form32 #encoder1{
+  position: relative;
+
+  /* border: 2px solid rgb(255, 227, 66); */
+  border-radius: 4px;
+
+  background: transparent;
+  outline: 0 none;
+  padding: 0 5px;
+  color: rgb(255, 227, 66);
+  /* position: relative; */
+
+}
+
+#form32 #speed1 option{
+  background: rgb(255, 227, 66);
+  color: black;
+  padding: 3px 0;
+  font-size: 16px;
+}
+#form32 #encoder1 option{
+  background: rgb(255, 227, 66);
+  color: black;
+  padding: 3px 0;
+  font-size: 16px;
+}
+
+.selectbox1 .icoArrow {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  z-index: 1; 
+  width: 35px; 
+  height: inherit;
+  border-left: 2px solid rgb(255, 227, 66);
+  font-size: 1.5em;
+}
+
+.select1 {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color:rgb(255, 227, 66);
+}
+
+.selectBox1 {
+  position: relative;
+  width: 12vw;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid rgb(255, 227, 66);
+}
+.selectBox1 .select {
+  width: inherit;
+  height: inherit;
+  background: transparent;
+  border: none;
+  outline: 0 none;
+  padding: 0 5px;
+  position: relative;
+  z-index: 3;
+}
+.selectBox1 .select option {
+  background: rgb(255, 227, 66);
+  color: black;
+  padding: 3px 0;
+  font-size: 16px;
+}
+.selectBox1 .icoArrow {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  z-index: 1; 
+  width: 35px; 
+  height: inherit;
+  border-left: 2px solid rgb(255, 227, 66);
+  font-size: 1.5em;
+}
+
+
+
+.li_button .btn-c{
+  position: relative;
+  left:6vh;
+}
+/* #all_submit{
+  position: relative;
+
+  border: none;
+  font-size: 1em;
+  padding: 25px 30px;
+  margin: 40px 0;
+  background-color: transparent;
+  color: rgb(43, 226, 165);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+
+} */
+
+
+
+.chart-value{
+  position: relative;
+
+  border: 2px solid rgb(255, 227, 66);
+  border-radius: 4px;
+
+  background: transparent;
+  outline: 0 none;
+  padding: 0 5px;
+  color: rgb(255, 227, 66);
+  /* position: relative; */
+
+}
+
+
+
+/* #delDataset{
+  position: relative;
+
+  border: 2px solid rgb(255, 227, 66);
+  border-radius: 4px;
+
+  background: transparent;
+  outline: 0 none;
+  padding: 0 5px;
+  color: rgb(255, 227, 66);
+  position: relative;
+
+} */
+
+/* #del_line_dset{
+  position: relative;
+
+  border: 2px solid rgb(255, 227, 66);
+  border-radius: 4px;
+
+  background: transparent;
+  outline: 0 none;
+  padding: 0 5px;
+  color: rgb(255, 227, 66);
+  /* position: relative; */
+
+
+#del_do_dset{
+  position: relative;
+
+  border: 2px solid rgb(255, 227, 66);
+  border-radius: 4px;
+
+  background: transparent;
+  outline: 0 none;
+  padding: 0 5px;
+  color: rgb(255, 227, 66);
+  /* position: relative; */
+
+}
+
+.li_button{
+  border: 1px green ;
+  align-items: center;
+  margin-left: 50px;
+}

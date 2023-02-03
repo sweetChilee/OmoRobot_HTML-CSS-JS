@@ -1,8 +1,6 @@
 
 <article class="art1">    
-
   <h1 class="B_title">Battery</h1>
-
     <!------------------------------battery도넛-canvas------------------------------------>
   <div id = "chart_all">
     <div id = "chart_d">
@@ -13,7 +11,6 @@
       <div class="e_do_chart_zone" id ="chart_d2" >
         <canvas id="myChart3"></canvas>
       </div>
-      
       
       <!------------------------------color도넛-canvas    ------------------------------------>
       <div class="c_do_chart_zone" id ="chart_d3" >
@@ -28,69 +25,86 @@
 
   <!--          button 존              -->
   <div class="li_button">
-    
-  <!------------------------------ 옵션존 -------------------------->
-  <div id="inputzone">
-    <div id="l_chart_value"></div>
-    <form id="form32" onsubmit=" return false;">
-      <select id="speed1" name="speed">
-        <option value="">속도</option>
-        <option value="30">30</option>
-        <option value="60">60</option>
-        <option value="90">90</option>
-      </select>
-      <select id="encoder1" name="encoder">
-        <option value="">엔코더</option>
-        <option value="22">22</option>
-        <option value="44">44</option>
-        <option value="66">66</option>
-      </select>
-      <button id="all_submit" type="submit">제출</button>
-    </form> 
-    
-    <form id="form3">
-      <div id="inputzone_do">
-        <input id="set-chart" type="button" class="chart-value" value="입력">
-        <br>
-      </div>
-    </form>
-  </div>
+    <!------------------------------ 옵션존 -------------------------->
+    <div id="inputzone">
+      <h3>setting</h3>
+      <h5>속도와 엔코더값을 입력하세요</h5>
+      <form id="form32" onsubmit=" return false;">
+        <div class="selectBox1">
+          <select id="speed1" name="speed" class="select">
+            <option value="">속도를 선택해주세요</option>
+            <option value="30">30</option>
+            <option value="60">60</option>
+            <option value="90">90</option>
+          </select>
+          <span class="icoArrow">&#9989;</span> 
+        </div><br/><br/>
+        <div class="selectBox1">
+          <select id="encoder1" name="encoder" class ="select">
+            <option value="">엔코더값을 선택해주세요</option>
+            <option value="22">22</option>
+            <option value="44">44</option>
+            <option value="66">66</option>
+          </select>
+          <span class="icoArrow">&#9989;</span>
+        </div>
+        <button class="btn-c" id="all_submit" type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          데이터<br>수신
+        </button>
+      </form> 
+      <form id="form3">
+        <div id="inputzone_do">
+          <button id="set-chart" type="button" class="btn-c"  >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          데이터<br>입력
+          <br>
+        </div>
+      </form>
+    </div>
 
-  <!-- <button type="button" id="addDataSet">데이터셋 추가</button> -->
-    <!-- 필요없으나 삭제시 그래프 출력 안되는문제로 hide -->
-    
-
-    <button type="button" id="delDataset">Delete</button>
-    <button type="button" id="del_line_dset">Refresh(L)</button>
-    <button type="button" id="del_do_dset">Refresh(D)</button>
+    <!-- <button class= deldataset type="button" id="delDataset">Delete</button> -->
+    <button class= "btn-c" type="button" id="del_line_dset">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      데이터<br>삭제
+    </button>
+    <!-- <button class= deldataset type="button" id="del_do_dset">Refresh(D)</button> -->
     <div id = "hide_button">
       <button type="button" id="addData">데이터 추가</button>
       <button type="button" id="delData">데이터 삭제</button>
     </div>
-
   </div>  
-
-
 </article>
 
+<!------------------------------line hide-box------------------------------------>
+<div id="l_chart_value" style="background-color:black;"></div>
+
 <!------------------------------battery도넛 hide-box------------------------------------>
-<form id="form" style="background-color:black">
-  <div id="inputzone_do">
-    <div id="d_chart_value"></div>
-    <!-- <input id="set-chart" type="button" class="chart-value" value="입력"> -->
+<form id="form">
+  <div id="inputzone_do" style="background-color:black;">
+    <div id="d_chart_value" ></div>
     <br>
   </div>
 </form>
 <!------------------------------encoder도넛 hide-box------------------------------------>
-<form id="form" style="background-color:black">
-  <div id="inputzone_do">
+<form id="form">
+  <div id="inputzone_do" style="background-color:black;">
     <div id="e_d_chart_value"></div>
     <br>
   </div>
 </form>
 <!------------------------------color도넛 hide-box------------------------------------>
-<form id="form" style="background-color:black">
-  <div id="inputzone_do">
+<form id="form">
+  <div id="inputzone_do" style="background-color:black;">
     <div id="c_d_chart_value"></div>
     <br>
   </div>

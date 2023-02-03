@@ -332,7 +332,6 @@ def delete_allmycar(request, pk, fk):
 
 
 
-@csrf_exempt
 def chart(request):
     if request.method=="POST":
         data =json.loads(request.body)

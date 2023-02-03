@@ -1,45 +1,46 @@
 {% load static %}
 
+<a id="hist"></a>
 <article class="art3">
-  <h1 class="C_title">history</h1>
+    <h1 class="C_title">history</h1>
   <div class="main area">
-    <div class="table area" style="margin-right:40px; display: block;">
-      <table class="table-box">
-        {% if mycars.exists %}
-        <caption>  </caption>
-        <thead>
-          <tr class="table_title">
-            <td><h1>User_ID</h1></td>
-            <td><h1>Speed</h1></td>
-            <td><h1>Battery</h1></td>
-            <td><h1>Color</h1></td>
-            <td><h1>Created_at</h1></td>
-          </tr>
-        </thead>
-          <div style="width: 52vw; height: 40;">
-              {% for mycar in mycars %}
-              <tbody>
-                <tr>
-                  <td><h1>{{ mycar.user_name }}</h1></td>
-                  <td><h1>{{ mycar.mycar_speed }}</h1></td>
-                  <td><h1>{{ mycar.mycar_battery }}</h1></td>
-                  <td><h1>{{ mycar.mycar_color }}</h1></td>
-                  <td><h1>{{ mycar.created_at }}</h1></td>
-                  <td>
-                    {% if user_name %}
-                    <form action="{{ mycar.get_delete_url }}" method="post">
-                      {% csrf_token %}
-                      <button type="submit">삭제</button>
-                    </form>
-                    {% endif%}
-                  </td>
-                </tr>
-              </tbody>
-              {% endfor %}
-          </div>             
-      </table>
-      {% endif %}
-    </div>
+      <div class="table area" style="margin-right:40px; display: block;">
+        <table class="table-box">
+          {% if mycars.exists %}
+          <caption>  </caption>
+          <thead>
+            <tr class="table_title">
+              <td><h1>User_ID</h1></td>
+              <td><h1>Speed</h1></td>
+              <td><h1>Battery</h1></td>
+              <td><h1>Color</h1></td>
+              <td><h1>Created_at</h1></td>
+            </tr>
+          </thead>
+            <div style="width: 52vw; height: 40; overflow-y:auto;">
+                {% for mycar in mycars %}
+                <tbody>
+                  <tr>
+                    <td><h1>{{ mycar.user_name }}</h1></td>
+                    <td><h1>{{ mycar.mycar_speed }}</h1></td>
+                    <td><h1>{{ mycar.mycar_battery }}</h1></td>
+                    <td><h1>{{ mycar.mycar_color }}</h1></td>
+                    <td><h1>{{ mycar.created_at }}</h1></td>
+                    <td>
+                      {% if user_name %}
+                      <form action="{{ mycar.get_delete_url }}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">삭제</button>
+                      </form>
+                      {% endif%}
+                    </td>
+                  </tr>
+                </tbody>
+                {% endfor %}
+            </div>             
+        </table>
+        {% endif %}
+      </div>
 
       <div class="table_area" style="margin-right:40px; display: none;">
         <table class="table-box">
@@ -71,29 +72,29 @@
   </div>
 
 
-  <div class="setting_box">
-    <h3>SETTING</h3>
-    <h5>기본설정은 1개만 설정됩니다.</h5>
-    <div class="selectBox">
-      <select name="modelss" class="select">
-        <option disabled selected>모델을 선택해 주세요 </option>
-        <option value="r1">R1</option>
-        <option value="r1mini">R1 mini</option>
-        <option value="allr1">All R1</option>
-      </select>
-      <span class="icoArrow">&#9989;</span> </div>
+<div class="setting_box">
+  <h3>SETTING</h3>
+  <h5>기본설정은 1개만 설정됩니다.</h5>
+  <div class="selectBox">
+    <select name="modelss" class="select">
+      <option disabled selected>모델을 선택해 주세요 </option>
+      <option value="r1">R1</option>
+      <option value="r1mini">R1 mini</option>
+      <option value="allr1">All R1</option>
+    </select>
+    <span class="icoArrow">&#9989;</span> </div>
+  <br/>
+  <br/>
+  <div class="ckbox area">
+    <label class="checkbox area" >수기입력
+        <input type="checkbox" id="ck1" onclick="toggleTextBox(this)" name="ckbox1"/>
+    </label>
     <br/>
-    <br/>
-    <div class="ckbox area">
-      <label class="checkbox area" >수기입력
-          <input type="checkbox" id="ck1" onclick="toggleTextBox(this)" name="ckbox1"/>
-      </label>
-      <br/>
-      <label class="multi click" >다중세팅
-          <input type="checkbox" id="mtck" onclick="toggleMulti(this)" name="ckbox2"/>
-      </label>
-    </br></br>
-    </div>
+    <label class="multi click" >다중세팅
+        <input type="checkbox" id="mtck" onclick="toggleMulti(this)" name="ckbox2"/>
+    </label>
+  </br></br>
+  </div>
 
 
 
@@ -130,7 +131,7 @@
   </form>
 
 
-  <form action="createmycarset/" method="post">
+  <form action="createallmycar/" method="post">
     {% csrf_token %}
       <div class="multiset" id="mtset" style="display: none;" >
           <div name="battery">
@@ -164,7 +165,7 @@
     </div>
   </form>
 
-  <form action="createmycar/" method="post">
+  <form action="createtextmycar/" method="post">
     {% csrf_token %}
       <div class="two text" id="twotext" style="display: none;">
           <input type="text" value="" placeholder="세팅모드를 적어주세요" name="carset">

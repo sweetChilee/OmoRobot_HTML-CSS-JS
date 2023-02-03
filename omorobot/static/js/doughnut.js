@@ -62,6 +62,7 @@ document.getElementById("set-chart").addEventListener("click", function(){
 
   percent_value = getValueInText1()
   config2 = {
+    plugins: [ChartDataLabels],
     type: 'doughnut',
     data: {
       labels: ['Battery',],
@@ -79,6 +80,12 @@ document.getElementById("set-chart").addEventListener("click", function(){
         }
       },
       plugins: {
+        datalabels:{
+          color: 'FFD700',
+          font:{
+            size:1,
+          }         },
+        
         customCanvasBackgroundColor: {
           color: 'transparent'
         }
@@ -110,6 +117,7 @@ document.getElementById("set-chart").addEventListener("click", function(){
   percent_value1 = getValueInText2()
   
   config3 = {
+    plugins: [ChartDataLabels],
     type: 'doughnut',
     data: {
       labels: ['Encoder',],
@@ -127,6 +135,13 @@ document.getElementById("set-chart").addEventListener("click", function(){
         }
       },
       plugins: {
+        
+        datalabels:{
+          color: "#DAA520",
+          font:{
+            size:1,
+          }  
+        },
         customCanvasBackgroundColor: {
           color: 'transparent'
         }
@@ -183,8 +198,9 @@ var config4
 document.getElementById("set-chart").addEventListener("click", function(){
 
   percent_value1 = 100
-  
+
   config4 = {
+    plugins: [ChartDataLabels],
     type: 'doughnut',
     data: {
       labels: ['Color',],
@@ -202,6 +218,10 @@ document.getElementById("set-chart").addEventListener("click", function(){
         }
       },
       plugins: {
+        datalabels:{
+          color: $("#c_data").val(),
+
+        },
         customCanvasBackgroundColor: {
           color: 'transparent'
         }
@@ -215,17 +235,19 @@ document.getElementById("set-chart").addEventListener("click", function(){
 
 
 
-document.getElementById('del_do_dset').onclick = function(){
-  console.log(config2)
-	config2.data.datasets.splice(-1,1);
-  config3.data.datasets.splice(-1,1);
-  config4.data.datasets.splice(-1,1);
-	drawchart.update();	//차트 업데이트
-	console.log($(".chart-value"))
-}
+// document.getElementById('del_do_dset').onclick = function(){
+//   console.log(config2)
+// 	config2.data.datasets.splice(-1,1);
+//   config3.data.datasets.splice(-1,1);
+//   config4.data.datasets.splice(-1,1);
+// 	drawchart.update();	//차트 업데이트
+// 	console.log($(".chart-value"))
+// }
 
 let percent_value_zero1 = 0;
 var config5 = {
+  plugins: [ChartDataLabels],
+
   type: 'doughnut',
   data: {
     labels: ['Battery',],
@@ -243,6 +265,13 @@ var config5 = {
       }
     },
     plugins: {
+      datalabels:{
+        color: "#DAA520",
+        font:{
+          size:1,
+        }  
+      },
+
       customCanvasBackgroundColor: {
         color: 'transparent'
       }
@@ -255,6 +284,8 @@ drawchart = new Chart(context2,config5);
 
 let percent_value_zero2 = 0;
 var config6 = {
+  plugins: [ChartDataLabels],
+
   type: 'doughnut',
   data: {
     labels: ['Encoder',],
@@ -272,6 +303,12 @@ var config6 = {
       }
     },
     plugins: {
+      datalabels:{
+        color: "#DAA520",
+        font:{
+          size:1,
+        }  
+      },
       customCanvasBackgroundColor: {
         color: 'transparent'
       }
@@ -284,6 +321,7 @@ drawchart = new Chart(context3,config6);
 
 let percent_value_zero3 = 0;
 var config7 = {
+  plugins: [ChartDataLabels],
   type: 'doughnut',
   data: {
     labels: ['Color',],
@@ -301,6 +339,12 @@ var config7 = {
       }
     },
     plugins: {
+      datalabels:{
+        color: "#DAA520",
+        font:{
+          size:1,
+        }  
+      },
       customCanvasBackgroundColor: {
         color: 'transparent'
       }

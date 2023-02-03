@@ -150,15 +150,15 @@ var myChart2 = new Chart(ctx, config);
 		myChart2.update();	//차트 업데이트
 	}
 
-//-----------//-----------//-----------//-----------//-----------//-----------//-----------
+
 
 	//데이터셋 삭제
-	document.getElementById('delDataset').onclick = function(){
-		config.data.datasets.splice(-1,1);
-		myChart2.update();	//차트 업데이트
-		console.log($(".chart-value"))
+// 	document.getElementById('delDataset').onclick = function(){
+// 		config.data.datasets.splice(-1,1);
+// 		myChart2.update();	//차트 업데이트
+// 		console.log($(".chart-value"))
 
-}
+// }
 
 
 
