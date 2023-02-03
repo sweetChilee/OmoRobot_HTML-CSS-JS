@@ -234,16 +234,6 @@ document.getElementById("set-chart").addEventListener("click", function(){
 
 
 
-
-// document.getElementById('del_do_dset').onclick = function(){
-//   console.log(config2)
-// 	config2.data.datasets.splice(-1,1);
-//   config3.data.datasets.splice(-1,1);
-//   config4.data.datasets.splice(-1,1);
-// 	drawchart.update();	//차트 업데이트
-// 	console.log($(".chart-value"))
-// }
-
 let percent_value_zero1 = 0;
 var config5 = {
   plugins: [ChartDataLabels],
