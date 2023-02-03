@@ -13,43 +13,8 @@
 }
 
 
-#chart_d1{
-  /* border : white solid 1px; */
-  position: relative; height:150px; width:400px;
-  margin-right : 50px;
-} 
 
-#chart_d2{
-  /* border : white solid 1px; */
-  margin-right : 50px;
-  position: relative; height:150px; width:400px
-}
 
-#chart_d3{
-  /* border : white solid 1px; */
-  margin-right : 50px;
-  position: relative; height:150px; width:400px
-}
-
-#chart_d{
-  position: relative;
-  display:flex;
-  align-items: center;
-}
-
-#chart_l1{
-
-  margin-top : 150px;
-  position: relative; 
-
-  height:600px; width:1200px;
-  display:flex;
-  align-items: center;
-}
-#chart_all{
-  /* border: yellow solid 0.5px ; */
-  padding: 10px;
-}
 
 #inputzone{
   display: table;

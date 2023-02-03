@@ -48,20 +48,20 @@
 
 #chart_d1{
   /* border : white solid 1px; */
-  position: relative; height:150px; width:400px;
+  position: relative; height:150px; width:300px;
   margin-right : 50px;
 } 
 
 #chart_d2{
   /* border : white solid 1px; */
   margin-right : 50px;
-  position: relative; height:150px; width:400px
+  position: relative; height:150px; width:300px;
 }
 
 #chart_d3{
   /* border : white solid 1px; */
   margin-right : 50px;
-  position: relative; height:150px; width:400px
+  position: relative; height:150px; width:300px;
 }
 
 #chart_d{
@@ -72,10 +72,10 @@
 }
 
 #chart_l1{
-  margin-top : 100px;
+  margin-top : 60px;
   position: relative; 
   height:40vh; width:55vw;
-  left: 7em;
+  left: -2em;
   display:flex;
   align-items: center;
 }
