@@ -13,11 +13,11 @@ context = {
             "message" : "",
             }
 
-
-def realtime(request):
-    url = "https://port-0-test1-1jx7m2gldd914cb.gksl2.cloudtype.app/mycar"
-    requestData = requests.get(url)
-    jsonData = requestData.json()
+# 배포 시 주석 해제
+# def realtime(request):
+#     url = "https://port-0-test1-1jx7m2gldd914cb.gksl2.cloudtype.app/mycar"
+#     requestData = requests.get(url)
+#     jsonData = requestData.json()
 
 
 ###
@@ -26,6 +26,7 @@ def realtime(request):
 ###
 
 # main index페이지 보여주기
+## 배포 시 주석 해제
 def index(request):
     mycar = Mycar.objects.all()
     global context
@@ -34,41 +35,42 @@ def index(request):
     # real car 부분
     ### 
 
-    real_speed =[]
-    real_battery = []
-    real_color = []
-    real_created_at =[]
-    real_car_id =[]
+    # real_speed =[]
+    # real_battery = []
+    # real_color = []
+    # real_created_at =[]
+    # real_car_id =[]
 
-    response_data = requests.get('https://port-0-test1-1jx7m2gldd914cb.gksl2.cloudtype.app/mycar')
-    if response_data.status_code == 200 :
-        reqData = response_data.json()
-        for i in reqData:
-            real_speed.append(int(i['speed']))
-            real_battery.append(int(i['battery']))
-            real_color.append(i['color'])
-            real_created_at.append(i['created_at'])
-            real_car_id.append(int(i['id']))
+    # response_data = requests.get('https://port-0-test1-1jx7m2gldd914cb.gksl2.cloudtype.app/mycar')
+    # if response_data.status_code == 200 :
+    #     reqData = response_data.json()
+    #     for i in reqData:
+    #         real_speed.append(int(i['speed']))
+    #         real_battery.append(int(i['battery']))
+    #         real_color.append(i['color'])
+    #         real_created_at.append(i['created_at'])
+    #         real_car_id.append(int(i['id']))
 
-    real_battery.reverse()
-    show_battery = real_battery[:5]
-    show_battery.reverse()
-    real_speed.reverse()
-    show_speed = real_speed[:10]
-    show_speed.reverse()
+    # real_battery.reverse()
+    # show_battery = real_battery[:5]
+    # show_battery.reverse()
+    # real_speed.reverse()
+    # show_speed = real_speed[:10]
+    # show_speed.reverse()
     ###
     # 출력 부분
     ### 
+    # 배포 시 주석 해제
     context = {
         "joinmessage" : "",
         "message" : "",
         "mycars": mycar,
-        "real_speed" : show_speed,
-        "real_battery" : show_battery,
-        "preview_speed" : real_speed[0],
-        "preview_battery" : real_battery[0],
-        "preview_color" : real_color[-1],
-        "preview_created_at" : real_created_at[-1],
+        # "real_speed" : show_speed,
+        # "real_battery" : show_battery,
+        # "preview_speed" : real_speed[0],
+        # "preview_battery" : real_battery[0],
+        # "preview_color" : real_color[-1],
+        # "preview_created_at" : real_created_at[-1],
 
     }
     return render(request, "index.html", context)
